@@ -13,14 +13,14 @@ void main() {
 final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({Key key}) : super(key: key);
 
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  GoogleSignInAccount? _currentUser;
+  GoogleSignInAccount _currentUser;
 
   @override
   void initState() {
@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
   }
 
   Widget _buildWidget() {
-    GoogleSignInAccount? user = _currentUser;
+    GoogleSignInAccount user = _currentUser;
     if (user != null) {
       return Padding(
         padding: const EdgeInsets.fromLTRB(2, 12, 2, 12),

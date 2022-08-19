@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:send_data_another_page/secondpage.dart';
+import 'package:send_data_another_page/thirdpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +40,11 @@ class Home extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage(str: "Rp.1000"),));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SecondPage(str: "Rp.1000"),
+                    ));
               },
               child: Text('Send Data'),
             ),
@@ -52,9 +57,28 @@ class Home extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage(str: "Rp.2000"),));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SecondPage(str: "Rp.2000"),
+                    ));
               },
               child: Text('Send Data'),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ThirdPage(
+                        img: 'https://images5.alphacoders.com/540/540654.jpg',
+                      ),
+                    ));
+              },
+              child: Text('Next Page'),
             ),
           ],
         ),
